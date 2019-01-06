@@ -1808,5 +1808,5 @@ header {
 \*------------------------------------*/
 
 .vote-sec {
-    box-align: right;
+    position: right;
 }
