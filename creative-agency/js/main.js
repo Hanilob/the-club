@@ -90,3 +90,13 @@
         }
     });
 })(jQuery);
+///////////////////////////
+// sign UP
+var submitEl = document.getElementsByClassName('btn-lg', 'btn-primary');
+var logoImgEl = document.getElementsByClassName('logo');
+
+
+var onSubmitClick = function() {
+    logoImgEl += "welcome," + document.getElementsByClassName('email') + "!"
+}
+submitEL.addEventListener("click", onSubmitClick);

@@ -34,6 +34,20 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDC1CHDPXefIXqcZMZrvTrhiwhh5pWUzOc",
+            authDomain: "the-club-ec655.firebaseapp.com",
+            databaseURL: "https://the-club-ec655.firebaseio.com",
+            projectId: "the-club-ec655",
+            storageBucket: "the-club-ec655.appspot.com",
+            messagingSenderId: "919082152777"
+        };
+        firebase.initializeApp(config);
+    </script>
 </head>
 
 <body>
@@ -72,10 +86,8 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#voting">Voting</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#service">Services</a></li>
-                    <li><a href="#pricing">Pricing (will be deleted)</a></li>
+                    <li><a href="#store">Store</a></li>
                     <li><a href="#team">Team</a></li>
-                    <li class="education"><a href="#education">Education</a></li>
                     <li><a href="#signup">Sign Up</a></li>
                     <li class="has-dropdown"><a href="#blog">Blog</a>
                         <ul class="dropdown">
@@ -188,16 +200,6 @@
                     <div align="center" style="padding:3px;"><input type="submit" value=" Vote ">&nbsp;<input type="submit" name="view" value=" View "></div>
                 </div>
             </form>
-            <div align="right" class="vote-sec" id="vote-2">
-                <form align="center" method="post" action="https://poll.pollcode.com/14139593">
-                    <div style="background-color:#EEEEEE;padding:2px;width:375px;height:375px;font-family:Arial;font-size:small;color:#000000;">
-                        <div style="padding:2px 0px 4px 2px;"><strong>No Votes Right Now.</strong></div><input type="radio" name="answer" value="1" id="answer141395931" style="float:left;" /><label for="answer141395931" style="float:left;width:150px;">yes</label>
-                        <div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="2" id="answer141395932" style="float:left;" /><label for="answer141395932" style="float:left;width:150px;">no</label>
-                        <div style="clear:both;height:2px;"></div>
-                        <div align="center" style="padding:3px;"><input type="submit" value=" Vote ">&nbsp;<input type="submit" name="view" value=" View "></div>
-                    </div>
-                </form>
-            </div>
         </div>
     </div>
     <!-- /voting -->
@@ -330,8 +332,9 @@
     </div>
     <!-- /Portfolio -->
 
+    <!-- Store-->
     <!-- Service -->
-    <div id="service" class="section md-padding">
+    <div id="store" class="section md-padding">
 
         <!-- Container -->
         <div class="container">
@@ -341,7 +344,8 @@
 
                 <!-- Section header -->
                 <div class="section-header text-center">
-                    <h2 class="title">What we offer</h2>
+                    <h2 class="title">Club Store</h2>
+                    <h3>You can get credits by playing IG games!</h3>
                 </div>
                 <!-- /Section header -->
 
@@ -489,7 +493,7 @@
                 <div class="col-sm-3 col-xs-6">
                     <div class="number">
                         <i class="fa fa-users"></i>
-                        <h3 class="white-text"><span class="counter">451</span></h3>
+                        <h3 class="white-text"><span class="counter">NO</span></h3>
                         <span class="white-text">Happy clients</span>
                     </div>
                 </div>
@@ -509,7 +513,7 @@
                 <div class="col-sm-3 col-xs-6">
                     <div class="number">
                         <i class="fa fa-coffee"></i>
-                        <h3 class="white-text"><span class="counter">154</span>K</h3>
+                        <h3 class="white-text"><span class="counter">0</span>K</h3>
                         <span class="white-text">Cups of Coffee</span>
                     </div>
                 </div>
@@ -519,7 +523,7 @@
                 <div class="col-sm-3 col-xs-6">
                     <div class="number">
                         <i class="fa fa-file"></i>
-                        <h3 class="white-text"><span class="counter">45</span></h3>
+                        <h3 class="white-text"><span class="counter">1</span></h3>
                         <span class="white-text">Projects completed</span>
                     </div>
                 </div>
@@ -798,33 +802,17 @@
     <!-- sign up -->
     <div id="signup" class="section-md-padding bg-gray">
         <h1></h1>
-        <form action="/action_page.php" style="border:1px solid #ccc">
-            <div class="container">
-                <h1>Sign Up</h1>
-                <p>Please fill in this form to create an account.</p>
-                <hr>
-
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <label for="psw-repeat"><b>Repeat Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-                <label>
-                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        <div class="wrapper">
+            <form class="form-signin">
+                <h2 class="form-signin-heading">Please login</h2>
+                <input type="text" class="form-control email" name="username" placeholder="Email Address" required="" autofocus="" />
+                <input type="password" class="form-control" name="password" placeholder="Password" required="" />
+                <label class="checkbox">
+                <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
               </label>
-
-                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-                <div class="clearfix">
-                    <button type="button" class="cancelbtn">Cancel</button>
-                    <button type="submit" class="signupbtn">Sign Up</button>
-                </div>
-            </div>
-        </form>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+            </form>
+        </div>
     </div>
     <!-- /sign up -->
 
@@ -839,7 +827,7 @@
 
                 <!-- Section header -->
                 <div class="section-header text-center">
-                    <h2 class="title">Recents news</h2>
+                    <h2 class="title">Recent news</h2>
                 </div>
                 <!-- /Section header -->
 
