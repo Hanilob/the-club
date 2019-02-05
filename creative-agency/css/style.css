@@ -169,6 +169,7 @@ ol {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    -webkit-background-size: cover;
 }
 
 .bg-img .overlay {
